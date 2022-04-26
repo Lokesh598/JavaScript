@@ -60,7 +60,8 @@ defined using template literals`
 
 Template literals are also great because they provide an easy way to
 interpolate variables and expressions into strings.
-```
+
+```javascript
 const var = 'Lokesh'
 const string = `${var} + Singh`
 
