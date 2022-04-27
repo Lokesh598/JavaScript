@@ -1,127 +1,179 @@
-### javascript variables
+#### typeof
+typeof is a JavaScript keyword that will return the type of a variable when you call it.
 
-const, let, var
-Until 2015, var was the only way we could declare a variable in JavaScript.
-Today, a modern codebase will most likely just use const and let .
+#### What is the typeof function?
+The TypeOf function is an important tool when dealing with complex code. It allows a programmer to quickly check a variable's data type—or whether it's “undefined” or “null”—without going through the code line by line! Additionally, the TypeOf function can also check whether an operand is an object or not.
 
-#### types of variables in javascript
+arrays and null both are type of objects.
 
-In javascript there in no type of a variable, they are untype.
-means we can assign int, char and string data types variable and JS identify itself.
-
-in javascript we have main two kind types: primitive types and objects types.
-
-- primitive types
-    - numbers
-    - strings
-    - booleans
-    - symbols
-    and two special types are: null and undefined.
-
-- object types
-    object types have properties and also have methods that can act on those properties.
-
-### JavaScript expressions
-
-in JS we have equality and inequality but it is some difference as we have in c/cpp.
-
-for assignment: ===
-and for not equal: !==
-
-we also have == and != but === and !== prevents from subtle problems.
-
-### JavaScript conditionals
-JS has same syntax as C/C++ language.
-
-### JavaScript String
-String is a sequence of characters.
-
-string can be defined as string literals using quotes and double quotes:
-    'A class'
-    "Another String"
-
-const name = 'Lokesh'
-
-name.length //6
-console.log(''.length); // 0
-
-Two strings can be joined using "+" operator.
-
-"A" + "String" 
-console.log() // A String
-
-'my name is ' + name //my name is Lokesh
-
-A string can also define using template literals, define inside backticks. They are especially useful to make multiline strings much simpler
-
-const string = `this is string 
-
-defined using template literals`
-
-Template literals are also great because they provide an easy way to
-interpolate variables and expressions into strings.
-
-```javascript
-const var = 'Lokesh'
-const string = `${var} + Singh`
-
-console.log(string);
-```
-
-We can define any expressions inside template literals.
-example 
-```
-const string = `something ${1 + 2 + 3}`
-const string2 = `something
-${foo() ? 'x' : 'y'}`
+type of data type tells about the...
 
 ```
-
-### JavaScript Arrays
-An array is a collection of similer data types elements.
-Array in javascript are not a type on their on.
-Arrays are objects.
-we can initialize empty array in two ways:
-```
-const a = [] // literal synstax
-const a = Array() // built in function
+const whatIsMyType = 111111111111111111111n
+const typ = (typeof whatIsMyType)
+console.log(typ)
 ```
 
-we can prefill the array using this syntax:
+#### Math Operators
+
 ```
-const a = [1,2,3]
-const a = Array.of(1,2,3)
+const myAge = 24
+
+const nextYearAge = myAge + 1
+
+console.log(nextYearAge)
 ```
 
-An array hold any value, even value of different type.
-example:
+#### Increamenting and Decreamenting
+these are type preincreament and postincreament
+these specially use in loop 
+
 ```
-const a = [1, 'leetcode', ['a', 'b']]
-```
-Since we can add array inside array, we can create multidimensional arrays(eg. matrix).
-```
-const mat = [
-    [1,2,3],
-    [4,5,6],
-    [7,8,9]
-]
-mat[2][0] // 7
+let myAge = 22
+
+myAge++ // myAge--
+console.log(myAge)
 ```
 
-We can initialize a new array with a set of values using this syntax, which first initializes an array of 12 elements, and fills each element with the 0 number:
-```
-Array(12).fill(0)
+#### functions in JS
 
-how to find length of the array
+```
+function helloFunction() {
+    console.log("hello javascript funnction");
+}
 
-const a = [1,2,3]
-a.length //3
+helloFunction() // calling of function
 ```
 
-Note that you can set the length of the array. If you assign a bigger number than the arrays current capacity, nothing happens. If you assign a smaller number, the array is cut at that position:
+how to pass parameters
+in javascript we dont have to define type of parameters, just pass into the function.
+
 ```
-const a = [1, 2, 3]
-a //[ 1, 2, 3 ]
-a.length = 2
-a //[ 1, 2 ]
+function addToMyAge(increamentBy, multiplyBy) {
+    console.log
+    myAge = (myAge + increamentBy) * multiplyBy
+}
+
+addsToMyAge(5,2)
+
+console.log(myAge)
 ```
+
+#### return statement
+```
+return
+```
+#### if-else statement
+
+#### logical operators
+&& -> logical and, || -> logical or
+
+#### Arrays
+
+#### for loop
+
+#### break, continue and return
+
+#### equality checks with JS
+
+```
+console.log(1===1) // return true
+
+or
+
+const result = 1 // assigning 1 to result
+
+and 
+
+const result = 1 === 1 // checks equality 
+```
+
+#### Objects
+
+```
+const myObject = {
+    'keyname' : 'value',
+    'keyname1': '1211'
+    'hello': {
+        'name': 'lokesh',
+        'sing': 'sing'
+    }
+}
+```
+
+#### call by refernce and call by value
+
+#### Scoping
+
+scope is bound between open and close braces.
+
+```
+functio x() {
+    const hello = 'world'
+}
+```
+#### Variable Shadowing
+
+
+#### Document object model
+
+1. document.querySelectror
+2. document.querySelectorAll 
+    (nodeList)
+    nodeList is same as arrayList there for we can iterate 
+    over it using for loop.
+    ```
+    const heading = document.querySelector('h1');;
+
+    heading.innerText = 'Hello lokesh';
+
+    const allListItems = document.querySelectorAll('ul li')
+
+    for( let i = 0; i < allListItems.length; i++){
+        const listItem = allListItems[i];
+        listItem.innerText = 'Hello lokesh';
+    }
+    console.log(heading);
+    console.log(allListItems);
+    ```
+3. introduction to event listener
+    ```
+    its listen or click which we makes through the buttons
+
+4. create elements dynamically javascrpt
+5. change html attribute with javascript
+6. change css styles with javascript
+
+```
+const heading = document.querySelector('h1');;
+
+heading.innerText = 'Hello lokesh';
+consolr.log(heading);
+```
+
+
+## mordern javascript ES6
+
+1. destructuring
+2. Arrow function
+3. New array method
+4. Template literals
+5. Promises and fetch
+
+#### 1. Destructuring 
+
+```
+const arr1 = [1,2,3]
+const arr2 = [4,5,6]
+
+const arr3 = [...arr1, ...arr2]
+
+console.log(arr3)
+```
+#### 2. Arrow Function 
+
+hoist
+```
+const arrowFunction = () => 200
+```
+
