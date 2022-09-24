@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    
+    <script type="text/javascript">
+        function arOpt(x,y,bVal)
+        {
+           var res = document.getElementById("res");
+           if(bVal=="Add")
+            res.value = parseInt(x) + parseInt(y);
+           else if(bVal=="Sub")
+            res.value = x - y;
+           else if(bVal=="Mul")
+            res.value = x * y;
+           else
+            res.value = x / y;
+        }
+        function setFocusToTxt1(txt1)
+        {
+            if(txt1.value.length==0)
+            {
+                txt1.focus();
+            }
+        }
+        function validateTxt1(txt1)
+        {
+            if(txt1.value.length!=0)
+                document.getElementById("txt1Message").style.color='white';
+            else
+                document.getElementById("txt1Message").style.color='red';
+        }
+    </script>
+    
+    <body>
+        <form>
+        <table align=center width=50%>
+            <tr>
+                <th>First Number</th>
+                <td><input type=text autofocus id="txt1" onblur="setFocusToTxt1(this)" onkeyup="validateTxt1(this)"></td>
+                <td style="color:red" id="txt1Message">Cannot be empty</td>
+            </tr>
+            <tr>
+                <th>Second Number</th>
+                <td><input type=text id="txt2"></td>
+            </tr>
+            <tr>
+                <th>Results</th>
+                <td><input type=text id="res"></td>
+            </tr>
+            <tr>
+                <td><input type=button value=Add onclick="arOpt(txt1.value,txt2.value,this.value)"></td>
+                <td><input type=button value=Sub onclick="arOpt(txt1.value,txt2.value,this.value)"></td>
+            </tr>
+            <tr>
+                <td><input type=button value=Mul onclick="arOpt(txt1.value,txt2.value,this.value)"></td>
+                <td><input type=button value=Div onclick="arOpt(txt1.value,txt2.value,this.value)"></td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>

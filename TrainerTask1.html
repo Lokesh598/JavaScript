@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        const green = document.getElementById('yes');
+
+        green.ariaChecked = true;
+
+      
+        function changeToGreen() {
+            document.getElementById("color").style.color = "green";
+        }
+        function changeToRed() {
+            document.getElementById("color").style.color = "red";
+        }
+        function changeToBlue() {
+            document.getElementById("color").style.color = "blue";
+        }
+        
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div align = "center">
+        <h1 id="color" >Give Color To Me</h1>
+        <input type="radio"  name="choose" value="green" onclick="changeToGreen()"/>
+        <label  for="html">Green</label>
+        <input type="radio" name="choose" value="blue" onclick="changeToBlue()"/>
+        <label for="html">Blue</label>
+        <input type="radio" name="choose" value="red" onclick="changeToRed()"/>
+        <label for="html">Red</label>
+    </div>
+
+    <div  class="container">
+        <div style="margin-top: 100px; margin-left: 100px;">
+            <!--list of fruits-->
+
+            <h2>List of fruits</h2>
+                <li> apple  </li>
+                <li> banana </li>
+        </div>
+        <div></div>
+    </div>
+</body>
+</html>

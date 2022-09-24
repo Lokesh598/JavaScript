@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        function power(x,n) {
+            var res = 1;
+            for(; n>0; n--) 
+                res = res*x;
+            return res
+        }
+        // function sum(x=1, y)
+        //     return x+y;
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.write("Hello world<br>");
+        document.write("Hello world through the java script!!<br>");
+
+        // working with variables
+        var x = 10;
+        document.write(x+"<br>");
+
+        var x = "Welcome to JS";
+        document.write(x+"<br>");
+
+        x = false;
+        
+        document.write(x+"<br>");
+        y = 10;
+        document.write(y+"<br>");
+
+        //hoisting
+        document.write(z+"<br>");
+        var z = 12;
+        
+        // prompt diaglog box
+
+        /*var x = parseInt(prompt("Enter first number:"));
+        var y = parseInt(prompt("Enter second number:"));
+        document.write(x+y);*/
+
+        // working with js String
+
+        var s = "Welcome to String";
+        document.write(s.length);
+
+        var s1 = "Welcome";
+        var s2 = "xel";
+        document.write(s1>s2+"<br>");
+
+        document.write(s1.charAt(3));
+
+        document.write(s1.substring(0,3));
+        
+        document.write(s1.substr(0,3));
+
+        document.write(s1.toLowerCase());
+
+        var td = new Date();
+        document.write(td);
+        document.write("<br>");
+        document.write(td.getDate()+"/"+(td.getMonth()+1)+"/"+(td.getFullYear()));
+
+        // working with conditional statements
+        
+        var n = 10;
+        if( n%2==0 ) 
+            document.write("<br>number is even");
+        else
+            document.write("number is odd");
+
+        var n1 = 10;
+        var n2 = 12;
+
+        if(n1 > n2) 
+            document.write("<br> n1 is greater then n2");
+        else
+            document.write("<br> n1 is smaller then n2");
+
+
+/*        while
+
+        do
+
+        while */
+
+        // Working with array
+        document.write("<br>");
+        var arr = [1,2,4,5,6];
+        for(var i = 0; i<arr.length; i++) {
+            document.write(arr[i] + " ");
+        }
+
+        document.write("<br>");
+        var a = [];
+        a.push(4);
+        a.push(6);
+        document.write(a);
+        document.write("<br>");
+        a.splice(4,6,3); // added 3 between 4 and 6
+        document.write(a);
+
+        document.write("<br>");
+        a.splice(0,2, 3);
+        document.write(a);
+
+        document.write("<br>");
+
+        a.sort();
+        document.write("<br>");
+        for(let b of arr ) // for each loop
+            document.write(b + " ");
+
+
+            document.write("<br>");
+
+        var arr = new Array(10,20,30,40);
+        document.write("<br>print array");
+        document.write("["+arr+"]");
+        document.write("<br>");
+        for(let c of arr) {
+            document.write(c + " ");
+        }
+
+        // Working with function
+
+        document.write("<br>");
+
+        function sum(x, y) {
+            return x+y;
+        }
+        document.write(sum(10,20));
+
+        document.write("<br>");
+        document.write(power(2,5));
+
+        document.write("<br>");
+        document.write(sum(10)); // nothing printing
+
+        var square = (x) => x*x; // Arraow function
+        document.write("<br>");
+        document.write(square(7));
+
+        document.write("<br>");
+
+        function abc() {
+            var i = 10; 
+            {
+                var j = 20
+            }
+            document.write(i+" "+j);
+        }
+        abc();
+    </script>
+</body>
+</html>
